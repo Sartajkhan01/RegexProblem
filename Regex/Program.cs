@@ -1,6 +1,7 @@
 ﻿using System;
 namespace Regex01
 {
+
     class Program
     {
         static void Main(string[] args)
@@ -9,7 +10,7 @@ namespace Regex01
             DataValidation validating = new DataValidation();
             bool end = true;
             Console.WriteLine("1. Validate First Name\n2. Validate Last Name\n3. Validate Email\n4. " +
-                "Validate Phone Number\n5. End The Program");
+                "Validate Phone Number\n5. Validate Password With Rule 1\n6. End The Program");
             while (end)
             {
                 Console.Write("Choose an option to execute : ");
@@ -32,6 +33,10 @@ namespace Regex01
                         validating.ValidatePhoneNumber();
                         break;
                     case 5:
+                        PasswordRules validate = new PasswordRules();
+                        validate.ValidatePassword();
+                        break;
+                    case 6:
                         end = false;
                         break;
                     default:
